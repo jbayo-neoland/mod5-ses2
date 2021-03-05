@@ -34,26 +34,7 @@ html
       
   body
     // header
-    - 
-      const logoAttr = {
-        src: "/logo.png", 
-        alt: "chiquito logo", 
-        style: {
-          "max-width": "150px", 
-          "min-width": "100px", 
-          "max-height": "90px",
-          "min-height": "50px" 
-        }
-      }
-    nav#header
-      img&attributes(logoAttr)
-      ul#list-options
-        //- TODO: list
-        - const liClasses = ["list-item", "menu-item"];
-        - const menuSections = ["Home", "About", "Faqs", "Login"];
-        each section, index in menuSections
-          li(id="section-"+index class=liClasses data-length=`${liClasses.length}`)= section
-    
+    include includes/header
           
     
               
