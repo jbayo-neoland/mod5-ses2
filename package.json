@@ -1,26 +1,21 @@
 {
   "name": "mod5-ses2",
-  "version": "1.0.0",
-  "description": "Vamos a crear un MVC con express y PUG. La página será un sencillo módulo de comentarios. * Construir con express generator el esqueleto * Usar pug como motor de plantillas * Implementar los controladores * A poder ser servir ficheros estáticos con express para los .js o imágenes en cuestión.",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "dev-server": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://jbayo-neoland@github.com/jbayo-neoland/mod5-ses2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jbayo-neoland/mod5-ses2/issues"
-  },
-  "homepage": "https://github.com/jbayo-neoland/mod5-ses2#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "express-generator": "^4.16.1",
-    "pug": "^3.0.2",
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "^1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11",
     "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
