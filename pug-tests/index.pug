@@ -24,5 +24,6 @@ html
       input#email(type="email" name="email")
       input#password(type="password" name="password")
       - const name = "Chiquito"
-      button Guardar #{name}
+      - const buttonStyle = {"font-size": "14px", "background-color": "#df45a5", padding: "5px", margin: "10px"}
+      button(style=buttonStyle) Guardar #{name}
     footer Made by love with Pug
