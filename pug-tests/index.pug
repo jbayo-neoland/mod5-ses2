@@ -1,6 +1,17 @@
 doctype html
 html
   head
+    link(rel="stylesheet" href="style.css")
+    
+    style.
+      #list-options{
+        list-style: none;
+        padding: 20px
+      }
+      
+      #list-options li {
+        display: inline
+      } 
   body
     // header
     - 
@@ -19,8 +30,11 @@ html
       ul#list-options
         //- TODO: list
         - const liClasses = ["list-item", "menu-item"];
-        li(class=liClasses data-length=`${liClasses.length}`)
-        li(class=liClasses)
+        - const menuSections = ["Home", "About", "Faqs", "Login"];
+        each section in menuSections
+          li(class=liClasses data-length=`${liClasses.length}`)= section
+    
+    
     section.container
       - const h1Content = "Hello World !!"
       h1= h1Content

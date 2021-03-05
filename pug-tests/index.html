@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      #list-options{
+        list-style: none;
+        padding: 20px
+      }
+      
+      #list-options li {
+        display: inline
+      } 
+    </style>
+  </head>
   <body>
     <!-- header-->
     <nav id="header"><img src="/logo.png" alt="chiquito logo" style="max-width:150px;min-width:100px;max-height:90px;min-height:50px;">
       <ul id="list-options">
-        <li class="list-item menu-item" data-length="2"></li>
-        <li class="list-item menu-item"></li>
+        <li class="list-item menu-item" data-length="2">Home</li>
+        <li class="list-item menu-item" data-length="2">About</li>
+        <li class="list-item menu-item" data-length="2">Faqs</li>
+        <li class="list-item menu-item" data-length="2">Login</li>
       </ul>
     </nav>
     <section class="container">
