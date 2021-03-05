@@ -9,7 +9,8 @@ html
         li
         li
     section.container
-      h1 Hello World
+      - const h1Content = "Hello World !!"
+      h1= h1Content
       div.full-description.
         Lorem fistrum benemeritaar tiene musho peligro benemeritaar. Ese hombree ese hombree va usté muy cargadoo a peich la caidita al ataquerl a peich fistro fistro. Ese pedazo de llevame al sircoo benemeritaar mamaar apetecan a wan me cago en tus muelas mamaar al ataquerl. Hasta luego Lucas diodenoo va usté muy cargadoo amatomaa. Qué dise usteer hasta luego Lucas está la cosa muy malar diodeno jarl. Llevame al sircoo a wan diodenoo ese pedazo de llevame al sircoo sexuarl. Benemeritaar al ataquerl llevame al sircoo torpedo está la cosa muy malar llevame al sircoo.
 
@@ -18,5 +19,7 @@ html
         p Bienvenidos al test con pug
           a Esto es un link de momento vacío
         .wrapper
+      input#email(type="email" name="email")
+      input#password(type="password" name="password")
       button Guardar
     footer Made by love with Pug
