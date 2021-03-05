@@ -6,8 +6,9 @@ html
     nav#header
       ul#list-options
         //- TODO: list
-        li
-        li
+        - const liClasses = ["list-item", "menu-item"];
+        li(class=liClasses)
+        li(class=liClasses)
     section.container
       - const h1Content = "Hello World !!"
       h1= h1Content
