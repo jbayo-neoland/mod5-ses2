@@ -7,7 +7,7 @@ html
       ul#list-options
         //- TODO: list
         - const liClasses = ["list-item", "menu-item"];
-        li(class=liClasses)
+        li(class=liClasses data-length=`${liClasses.length}`)
         li(class=liClasses)
     section.container
       - const h1Content = "Hello World !!"
@@ -22,5 +22,6 @@ html
         .wrapper
       input#email(type="email" name="email")
       input#password(type="password" name="password")
-      button Guardar
+      - const name = "Chiquito"
+      button Guardar #{name}
     footer Made by love with Pug
