@@ -1,3 +1,15 @@
+mixin peopleDump(people)
+  case people
+    when 0
+      p There is no people
+    when 1
+      p There is one person
+    when 2
+    when 3
+      p There are #{people} people
+    default
+      p It's full!
+
 doctype html
 html
   head
@@ -61,16 +73,7 @@ html
         
         
         - const people = 3;
-        case people
-          when 0
-            p There is no people
-          when 1
-            p There is one person
-          when 2
-          when 3
-            p There are #{people} people
-          default
-            p It's full!
+        + peopleDump(people)
         
         
         p Bienvenidos al test con pug
