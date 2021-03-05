@@ -3,7 +3,20 @@ html
   head
     link(rel="stylesheet" href="style.css")
     
+    - 
+      const weights = {
+        "xs": "10px",
+        "sm": "12px",
+        "md": "16px",
+        "lg": "20px",
+        "xl": "26px",
+        "xxl": "30px",
+        "xxxl": "40px"
+      }
+    each weight, label in weights
+      style=`.font-size-${label} { font-size: ${weight}}`
     style.
+      
       #list-options{
         list-style: none;
         padding: 20px
@@ -12,6 +25,7 @@ html
       #list-options li {
         display: inline
       } 
+      
   body
     // header
     - 
@@ -57,3 +71,10 @@ html
         button(style=buttonStyle)=`${action} ${name}`
     - const footerAttributes = {id: "footer", role: "footer", style: {color:"white", "background-color": "#333"}}
     footer&attributes(footerAttributes) Made by love with Pug
+    - const footerLinks = {"Privacy": "blue", "ToS": "black", "Faqs": "orange"}
+      each color, text in footerLinks
+        a(style="color:"+color)=text
+    
+    
+    
+    
