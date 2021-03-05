@@ -1,0 +1,6 @@
+
+- const footerAttributes = {id: "footer", role: "footer", style: {color:"white", "background-color": "#333"}}
+footer&attributes(footerAttributes) Made by love with Pug
+- const footerLinks = {"Privacy": "blue", "ToS": "black", "Faqs": "orange"}
+  each color, text in footerLinks
+    a(style="color:"+color background="#ddd")=text
