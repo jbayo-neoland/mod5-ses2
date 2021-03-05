@@ -31,8 +31,8 @@ html
         //- TODO: list
         - const liClasses = ["list-item", "menu-item"];
         - const menuSections = ["Home", "About", "Faqs", "Login"];
-        each section in menuSections
-          li(class=liClasses data-length=`${liClasses.length}`)= section
+        each section, index in menuSections
+          li(id="section-"+index class=liClasses data-length=`${liClasses.length}`)= section
     
     
     section.container
