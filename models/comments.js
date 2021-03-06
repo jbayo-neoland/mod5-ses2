@@ -16,7 +16,11 @@ module.exports = {
   },
 
   create: async (comment) => {
-    return await axios.post(`${dbAddress}/comments/`);
+    let response = await axios.post(`${dbAddress}/comments/`, comment);
+    if (response.status >= 200 && response.status < 300) {
+      return comment;
+    }
+    return false;
   },
 
   update: async (comment) => {

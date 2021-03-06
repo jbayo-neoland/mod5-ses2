@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   h1 Creata a new comment
-  form
+  form(method="POST")
     .row
       .col
         label(for="gameId")="Game id"
@@ -18,7 +18,7 @@ block content
     .row
       .col
         label(for="body")="Body"
-        textarea#commentBody
+        textarea#commentBody(name="body")
     .row
       .col  
         button(role="submit")="Create comment"
