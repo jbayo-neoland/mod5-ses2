@@ -1,0 +1,10 @@
+mixin commentSnippet(comment)
+  .comment-snippet
+    h3= comment.name
+    | By 
+    small.text-muted= `${comment.email}`
+    p= comment.body
+    br
+    .pull-right
+      button(class="btn btn-error") Delete comment
+      button(class="btn btn-success") Edit comment
