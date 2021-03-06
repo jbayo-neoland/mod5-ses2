@@ -12,7 +12,12 @@ module.exports = {
   },
 
   findOne: async (id) => {
-    return await axios.get(`${dbAddress}/comments/${id}`);
+    let response = await axios.get(`${dbAddress}/comments/${id}`);
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      return [];
+    }
   },
 
   create: async (comment) => {
