@@ -6,6 +6,6 @@ module.exports = {
     // 1.2
     let comments = await commentsModel.find();
     // 2
-    res.render('comments', {title:"List of comments", listComments: comments });
+    res.render('comments/list', {title:"List of comments", listComments: comments });
   }
 }
