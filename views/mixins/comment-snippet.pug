@@ -3,7 +3,7 @@ mixin commentSnippet(comment)
     h3= comment.name
     | By 
     small.text-muted= `${comment.email}`
-    p= comment.body
+    p.text-truncate= comment.body
     br
     .pull-right
       button(class="btn btn-error") Delete comment
