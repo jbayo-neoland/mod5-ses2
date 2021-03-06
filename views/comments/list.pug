@@ -4,7 +4,7 @@ include ../mixins/comment-snippet
 
 block content
   h1= title
-  button(class="btn btn-primary") Add Comment
+  button(class="btn btn-primary" type="button" onclick="location.href='comments/create'") Add Comment
   .container
     each comment in listComments
       +commentSnippet(comment)
