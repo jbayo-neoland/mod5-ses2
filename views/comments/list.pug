@@ -11,7 +11,7 @@ block content
   .navigation
     .row
       .col.pa-sm
-        button(class="float-end btn btn-default" type="button" onclick="location.href='comments?page=1'")= "Prev"
+        button(class="float-end btn btn-default" type="button" onclick=`location.href='comments?page=${prevPage}&limit=${limit}'`)= "Prev"
       .col.pa-sm
-        button(class="float-start btn btn-default" type="button" onclick="location.href='comments?page=2'")= "Next"
+        button(class="float-start btn btn-default" type="button" onclick=`location.href='comments?page=${nextPage}&limit=${limit}'`)= "Next"
       
