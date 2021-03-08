@@ -3,7 +3,7 @@ const dbAddress = 'http://localhost:3040';
 
 module.exports = {
   find: async (params) => {
-    let response = await axios.get(`${dbAddress}/comments`);
+    let response = await axios.get(`${dbAddress}/comments`, {params});
     if (response.status === 200) {
       return response.data;
     } else {
