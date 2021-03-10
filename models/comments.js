@@ -29,6 +29,10 @@ module.exports = {
   },
 
   update: async (comment) => {
-    return await axios.patch(`${dbAddress}/comments/`);
+    let response =  await axios.patch(`${dbAddress}/comments/${comment.id}`, comment);
+    if (response.status >= 200 && response.status < 300) {
+      return comment;
+    }
+    return false;
   }
 }
