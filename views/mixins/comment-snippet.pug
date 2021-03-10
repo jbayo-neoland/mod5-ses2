@@ -8,4 +8,4 @@ mixin commentSnippet(comment)
     br
     .pull-right
       button(class="btn btn-error") Delete comment
-      button(class="btn btn-success") Edit comment
+      button(class="btn btn-success" onclick=`location.href='/comments/${comment.id}/edit'`) Edit comment

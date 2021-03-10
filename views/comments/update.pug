@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1 Creata a new comment
+  form(method="PATCH")
+    .row
+      .col
+        label(for="gameId")="Game id"
+        input#gameId(type="number" name="gameId" value=comment.gameId)
+    .row
+      .col
+        label(for="name")="name"
+        input#commentName(type="text" name="name" value=comment.name)
+    .row
+      .col
+        label(for="email")="email"
+        input#commentEmail(type="email" name="email" value=comment.email)
+    .row
+      .col
+        label(for="body")="Body"
+        textarea#commentBody(name="body")= comment.body
+    .row
+      .col  
+        button(role="submit")="Update comment"
