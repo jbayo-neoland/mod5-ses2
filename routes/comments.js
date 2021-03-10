@@ -4,6 +4,7 @@ const listController = require('../controllers/comments/list')
 const createController = require('../controllers/comments/create')
 const detailController = require('../controllers/comments/detail')
 const updateController = require('../controllers/comments/update')
+const deleteController = require('../controllers/comments/delete')
 
 
 /* GET comments listing. */
@@ -22,5 +23,7 @@ router.get('/:id/edit', updateController.updateCommentGet);
 /* PATCH comments listing. */
 router.post('/:id/edit', updateController.updateCommentPost);
 
+/* PATCH comments listing. */
+router.post('/:id/delete', deleteController.deleteComment);
 
 module.exports = router;

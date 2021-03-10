@@ -34,5 +34,12 @@ module.exports = {
       return comment;
     }
     return false;
+  },
+  delete: async (id) => {
+    let response =  await axios.delete(`${dbAddress}/comments/${id}`);
+    if (response.status >= 200 && response.status < 300) {
+      return true;
+    }
+    return false;
   }
 }
