@@ -18,7 +18,7 @@ const c3 = function(req, res, next) {
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('users', {users: [{name: 'Sunil'}, {name: 'Mónica'}, {name: 'Luis'}, {name: 'Jacobo'}]});
 });
 router.get(
   /.*fly$/,
